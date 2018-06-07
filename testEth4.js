@@ -30,7 +30,7 @@ function runTest() {
 comm.create_async(0, true).then(function(comm) {
 
 	var eth = new ledger.eth(comm);
-	eth.signPersonalMessage_async("44'/60'/0'/0'/0", "0x77777774657374").then(function(result) {
+	eth.signPersonalMessage_async("44'/60'/0'/0'/0", "77777774657374").then(function(result) {
 		var v = result['v'] - 27;
 		v = v.toString(16);
 		if (v.length < 2) {
